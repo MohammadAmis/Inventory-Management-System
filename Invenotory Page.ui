@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1897</width>
+    <height>990</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(83, 131, 146);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget_3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>1405</x>
+      <y>150</y>
+      <width>461</width>
+      <height>831</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget{
+	border: 2px solid black;
+	border-radius: 15px;
+	background-color: rgb(83, 131, 146);
+}
+
+verticalLayout::QVBoxLayout{
+	Border:None;
+}
+
+QLineEdit{
+	height:40px;
+	border-radius:10px;
+	border-style:solid;
+	padding-left:5px;
+	background-color: rgb(98, 149, 162);
+}
+
+QLineEdit:hover{
+border-color: rgb(255, 255, 255);
+}
+
+QLineEdit:focus{
+	border-width: 2px;
+	border-color: rgb(0, 0, 0);
+	background-color: rgb(83, 131, 146);
+}</string>
+    </property>
+    <widget class="QPushButton" name="btnPay">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>710</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border-width:2px;
+	border-style: solid;
+	border-radius:15px;
+	width:250px;
+	height:50px;
+	background-color: rgb(98, 149, 162);
+}
+
+QPushButton:hover{
+	color: rgb(255, 255, 255);
+}
+
+QPushButton:pressed{
+	border-color: rgb(255, 255, 255);
+	border-style: solid;
+	background-color: rgb(83, 131, 146);
+}
+</string>
+     </property>
+     <property name="text">
+      <string>  Pay</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>image/icon-payment.png</normaloff>image/icon-payment.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>50</y>
+       <width>170</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:None</string>
+     </property>
+     <property name="text">
+      <string>BILLING AREA</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>32</x>
+       <y>234</y>
+       <width>175</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:None</string>
+     </property>
+     <property name="text">
+      <string>Number Of Items</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txtNumberItems">
+     <property name="geometry">
+      <rect>
+       <x>217</x>
+       <y>224</y>
+       <width>201</width>
+       <height>44</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>32</x>
+       <y>500</y>
+       <width>165</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:None</string>
+     </property>
+     <property name="text">
+      <string>Balance Amount</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txtBalancePrice">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>490</y>
+       <width>210</width>
+       <height>44</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>0.0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>0.0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>32</x>
+       <y>300</y>
+       <width>136</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:None</string>
+     </property>
+     <property name="text">
+      <string>Total Amount</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txtTotalPrice">
+     <property name="geometry">
+      <rect>
+       <x>178</x>
+       <y>290</y>
+       <width>241</width>
+       <height>44</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>0.0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>0.0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>32</x>
+       <y>434</y>
+       <width>129</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:None</string>
+     </property>
+     <property name="text">
+      <string>Paid Amount</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txtPaidPrice">
+     <property name="geometry">
+      <rect>
+       <x>171</x>
+       <y>424</y>
+       <width>245</width>
+       <height>44</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>0.0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txtSavePrice">
+     <property name="geometry">
+      <rect>
+       <x>176</x>
+       <y>358</y>
+       <width>241</width>
+       <height>44</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>0.0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>0.0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>32</x>
+       <y>368</y>
+       <width>134</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:None</string>
+     </property>
+     <property name="text">
+      <string>Save Amount</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_4" native="true">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>139</y>
+      <width>1391</width>
+      <height>851</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(83, 131, 146);</string>
+    </property>
+    <widget class="QTableView" name="InventoryTableView">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>10</y>
+       <width>1341</width>
+       <height>831</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+QHeaderView::section {
+	background-color: rgb(98, 149, 162);
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="showGrid">
+      <bool>true</bool>
+     </property>
+     <property name="cornerButtonEnabled">
+      <bool>true</bool>
+     </property>
+     <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+      <bool>true</bool>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>-18</x>
+      <y>0</y>
+      <width>1921</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="widget" native="true">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QWidget{
+	background-color: rgb(83, 131, 146);
+}
+
+QPushButton{
+	border-width:2px;
+	border-style: solid;
+	border-radius:15px;
+	background-color: rgb(98, 149, 162);
+	width:280px;
+	height:50px;
+}
+
+QPushButton:hover{
+	color: rgb(255, 255, 255);
+}
+
+QPushButton:pressed{
+	border-color: rgb(0, 0, 0);
+	border-style: solid;
+	background-color: rgb(98, 149, 162);
+}
+
+
+</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="spacing">
+         <number>60</number>
+        </property>
+        <property name="leftMargin">
+         <number>60</number>
+        </property>
+        <property name="topMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>30</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string> Open New Window</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>image/icon_open_new_tab.png</normaloff>image/icon_open_new_tab.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">width:300px;</string>
+          </property>
+          <property name="text">
+           <string> Save Current Window</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>image/icon_save_tab.png</normaloff>image/icon_save_tab.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>1044</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_3">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius:27px;
+width:60px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>image/icon_user_profile.png</normaloff>image/icon_user_profile.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="widget_2" native="true">
+       <property name="styleSheet">
+        <string notr="true">QWidget{
+background-color: rgb(83, 131, 146);
+border: 2px dashed black;
+    border-top-color: black;
+    border-right-color: rgb(83, 131, 146);
+    border-bottom-color: rgb(83, 131, 146);
+    border-left-color: rgb(83, 131, 146);
+}
+QLineEdit{
+
+	border-width: 2px;
+	border-style:solid;
+	border-color: rgb(0, 0, 0);
+	border-radius:20px;
+	padding-left:20px;
+	background-color: rgb(98, 149, 162);
+	height:50px;
+}
+
+QLineEdit:hover{
+border-color: rgb(255, 255, 255);
+}
+
+QLineEdit:focus{
+	border-style:solid;
+	border-width: 2px;
+	border-color: rgb(0, 0, 0);
+	background-color: rgb(83, 131, 146);
+}</string>
+       </property>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>2</y>
+          <width>1911</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="spacing">
+          <number>60</number>
+         </property>
+         <property name="leftMargin">
+          <number>50</number>
+         </property>
+         <property name="rightMargin">
+          <number>37</number>
+         </property>
+         <item>
+          <widget class="QLineEdit" name="txtBarcode">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="placeholderText">
+            <string>Enter Product Barcode</string>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="txtByName">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="placeholderText">
+            <string>Enter Product Name</string>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboCategory">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QComboBox{
+border: 2px solid black;
+border-radius:20px;
+padding-left:20px;
+height:50px;
+background-color: rgb(98, 149, 162);
+}
+
+QComboBox:hover{
+	border-color: rgb(255, 255, 255);
+}
+
+QComboBox::drop-down {
+    border-left-color: darkgray;
+    border-left-style: solid;
+}
+
+QComboBox QAbstractItemView {
+    border: 2px solid black;
+    border-radius: 20px;
+    selection-background-color: rgb(83, 131, 146);
+	selection-color: rgb(255, 255, 255);
+    background:rgb(98, 149, 162);
+}
+</string>
+           </property>
+           <property name="editable">
+            <bool>false</bool>
+           </property>
+           <property name="currentText">
+            <string>All</string>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QComboBox::AdjustToContents</enum>
+           </property>
+           <property name="minimumContentsLength">
+            <number>20</number>
+           </property>
+           <item>
+            <property name="text">
+             <string>All</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>New Item 1</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>New Item 2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>New Item 3</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>New Item 4</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>New Item 5</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>New Item 6</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>New Item 7</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
